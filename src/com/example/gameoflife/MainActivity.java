@@ -1,22 +1,32 @@
 package com.example.gameoflife;
 
-import android.os.Bundle;
-import android.view.Menu;
+import com.example.gameoflife.R.id;
+import com.example.gameoflife.R.layout;
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
 
-public class MainActivity extends Activity {
+public 	class MainActivity 
+		extends Activity 
+		implements OnClickListener{
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(layout.activity_main);
+		// Click-handlers for buttons
+		View aboutButton = findViewById(id.about_button);
+		aboutButton.setOnClickListener(this);
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
+	
+	public void onClick(View v){
+		switch (v.getId()){
+		case id.about_button:
+			Intent i=new Intent(this, AboutActivity.class);
+			startActivity(i);
+			break;
+		}
 	}
-
 }
