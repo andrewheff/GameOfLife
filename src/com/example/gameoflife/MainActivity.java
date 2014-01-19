@@ -16,16 +16,25 @@ public 	class MainActivity
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(layout.activity_main);
+		
 		// Click-handlers for buttons
+		View newButton = findViewById(id.new_button);
+		newButton.setOnClickListener(this);
 		View aboutButton = findViewById(id.about_button);
 		aboutButton.setOnClickListener(this);
 	}
 	
 	public void onClick(View v){
 		switch (v.getId()){
+		
+		case id.new_button:
+			Intent gridIntent = new Intent(this, GridActivity.class);
+			startActivity(gridIntent);
+			break;
+		
 		case id.about_button:
-			Intent i=new Intent(this, AboutActivity.class);
-			startActivity(i);
+			Intent aboutIntent = new Intent(this, AboutActivity.class);
+			startActivity(aboutIntent);
 			break;
 		}
 	}

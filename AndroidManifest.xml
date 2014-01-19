@@ -28,6 +28,14 @@
             android:theme="@android:style/Theme.Dialog">
 		</activity>
 		
+        <activity android:name=".GridActivity" 
+            android:label="@string/grid_title">
+        </activity>
+        
+        <activity android:name=".PreferencesActivity" 
+            android:label="@string/settings_title" >
+		</activity>
+        
     </application>
 
 </manifest>
