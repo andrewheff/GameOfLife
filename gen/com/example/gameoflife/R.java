@@ -9,13 +9,16 @@ package com.example.gameoflife;
 
 public final class R {
     public static final class array {
-        public static final int underpopulation_options=0x7f050000;
-        public static final int underpopulation_values=0x7f050001;
+        public static final int animation_speed_options=0x7f050002;
+        public static final int animation_speed_values=0x7f050003;
+        public static final int population_options=0x7f050000;
+        public static final int population_values=0x7f050001;
     }
     public static final class attr {
     }
     public static final class color {
         public static final int background=0x7f060000;
+        public static final int cell=0x7f060001;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -33,11 +36,12 @@ public final class R {
     public static final class id {
         public static final int about_button=0x7f0b0003;
         public static final int about_content=0x7f0b0000;
-        public static final int action_settings=0x7f0b0005;
+        public static final int action_settings=0x7f0b0006;
         public static final int continue_button=0x7f0b0001;
         public static final int exit_button=0x7f0b0004;
+        public static final int grid_view=0x7f0b0005;
         public static final int new_button=0x7f0b0002;
-        public static final int settings=0x7f0b0006;
+        public static final int settings=0x7f0b0007;
     }
     public static final class layout {
         public static final int about=0x7f030000;
